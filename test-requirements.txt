@@ -1,0 +1,8 @@
+sphinx
+coverage
+flake8
+mock
+pylint
+pytest
+pytest-cov
+pbr

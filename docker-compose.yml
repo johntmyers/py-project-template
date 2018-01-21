@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  sub:
+    build:
+      context: .
+    restart: always
+    env_file: .env
+    depends_on:
+      - redis
+    command: python -m proj.sub
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379
